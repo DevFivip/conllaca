@@ -1,0 +1,63 @@
+productos = {
+	imagen,
+	categoria,
+	subcategoria,
+	titulo,
+	descripcion,
+	precio
+}
+
+categorias = {
+	nombre
+}
+
+sub_categorias = {
+	nombre
+}
+
+
+
+
+infomacion_general = {
+	direccion,
+	nombre_empresa,
+	telefono
+	telefono2
+	whatapp
+	sort_description,
+	email
+}
+
+/////section////
+
+headertron = {
+	imagen,
+	title,
+	descripcion
+	link_to
+}
+
+testimonios = {
+	imagen,
+	titulo
+	descripcion
+}
+
+clientes = {
+	imagen,
+	titulo
+	descripcion
+}
+
+horarios = {
+	dia,
+	apertura,
+	cierre,
+}
+
+
+redes_sociales = {
+	icon,
+	nombre,
+	direccion
+}
