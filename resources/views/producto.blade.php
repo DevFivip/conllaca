@@ -13,7 +13,7 @@
     <meta name="Copyright" content="Copyright (c) 2022 Concretera de los Llanos Centrales. C.A.">
     <link href="https://winestore-online.com/Themes/Winestore/assets/images/favicon.ico" rel="shortcut icon"
         type="image/ico">
-    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7331616/7007392/css/fonts.css">
+    {{-- <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7331616/7007392/css/fonts.css"> --}}
     <link rel="stylesheet" href="../../css/theme.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <style>
@@ -47,8 +47,10 @@
                     <div class="o-grid">
                         <div class="o-grid__column -lg-12 -sm-8 -xs-4">
                             <a href="/" class="c-header__nav__logo">
-                                <img src="https://winestore-online.com/Themes/Winestore/Assets/images/winestore-logo.svg"
-                                    alt="Concretera">
+                                <a href="/" class="c-header__nav__logo">
+                                    <img src="/storage/{{$info->logo}}"
+                                        alt="Concretera">
+                                </a>
                             </a>
                             <nav>
                                 <ul>
@@ -157,6 +159,8 @@
                                     </h4>
                                 </div>
                                 <h3> {{ $producto->subcategoria->nombre }}</h3>
+                                <a href="/producto/{{ $producto->id }}" ws-add-cart-modal="211803"><span
+                                    class="c-icon "> <i class="fa fa-plus"></i> </span> Ver Detalles</a>
                             </div>
                             <div class="c-featured__item__image">
                                 <img src="/storage/{{ $producto->imagen }}"

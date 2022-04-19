@@ -12,7 +12,7 @@
     <meta name="Copyright" content="Copyright (c) 2022 Concretera de los Llanos Centrales. C.A.">
     <link href="https://winestore-online.com/Themes/Winestore/assets/images/favicon.ico" rel="shortcut icon"
         type="image/ico">
-    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7331616/7007392/css/fonts.css">
+    {{-- <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7331616/7007392/css/fonts.css"> --}}
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -55,7 +55,8 @@
                 <div class="o-grid">
                     <div class="o-grid__column -lg-12 -sm-8 -xs-4">
                         <a href="/" class="c-header__nav__logo">
-                            <img src="/Themes/Winestore/Assets/images/winestore-logo.svg" alt="Concretera">
+                            <img src="/storage/{{$info->logo}}"
+                                alt="Concretera">
                         </a>
                         <nav>
                             <ul>
@@ -68,7 +69,6 @@
                                         <li>
                                             <a href="/contactanos" class="-active">Contactanos</a>
                                         </li>
-
                                     </ul>
                                 </nav>
                             </ul>
@@ -258,8 +258,6 @@
             menu = document.getElementById('menu-mobil');
             menu.classList.remove('-active');
         }
-
-
 
         var map = L.map('map').setView([9.868544, -67.378721, 4.5], 8);
 

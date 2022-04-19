@@ -12,7 +12,7 @@
     <meta name="Copyright" content="Copyright (c) 2022 Concretera de los Llanos Centrales. C.A.">
     <link href="https://winestore-online.com/Themes/Winestore/assets/images/favicon.ico" rel="shortcut icon"
         type="image/ico">
-    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7331616/7007392/css/fonts.css">
+    {{-- <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7331616/7007392/css/fonts.css"> --}}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/theme.css">
     <style>
@@ -45,8 +45,7 @@
                 <div class="o-grid">
                     <div class="o-grid__column -lg-12 -sm-8 -xs-4">
                         <a href="/" class="c-header__nav__logo">
-                            <img src="https://winestore-online.com/Themes/Winestore/Assets/images/winestore-logo"
-                                alt="Concretera">
+                            <img src="/storage/{{ $info->logo }}" alt="Concretera">
                         </a>
                         <nav>
                             <ul>
@@ -113,70 +112,70 @@
 
                 </div>
             </section>
-            <section class="c-main">
 
-                <section class="o-grid c-featured ">
-                    <h1>Conoce Nuestros Productos</h1>
-                    <div class="c-featured__content">
+            <section class="o-grid c-featured ">
+                <h1>Conoce Nuestros Productos</h1>
+                <div class="c-featured__content">
 
-                        @foreach ($productos as $producto)
-                            <div class="c-featured__item o-grid__column -lg-4 -md-6 -sm-12">
-                                <div class="c-featured__item__desc c-product">
-                                    <div class="c-featured__item__category">
-                                        {{ $producto->categoria->nombre }}
-                                    </div>
-                                    <h2>
-                                        <a href="/producto/{{ $producto->id }}">
-                                            {{ $producto->producto_nombre }}
-                                        </a>
+                    @foreach ($productos as $producto)
+                        <div class="c-featured__item o-grid__column -lg-4 -md-6 -sm-12">
+                            <div class="c-featured__item__desc c-product">
+                                <div class="c-featured__item__category">
+                                    {{ $producto->categoria->nombre }}
+                                </div>
+                                <h2>
+                                    <a href="/producto/{{ $producto->id }}">
+                                        {{ $producto->producto_nombre }}
+                                    </a>
+                                </h2>
+                                <div class="c-pricetag">
+                                    <h2 style="font-size:18px;">
+                                        {{ $producto->precio }}
                                     </h2>
-                                    <div class="c-pricetag">
-                                        <h2 style="font-size:18px;">
-                                            {{ $producto->precio }}
-                                        </h2>
-
-                                    </div>
-                                    <h3>{{ $producto->subcategoria->nombre }}</h3>
 
                                 </div>
-                                <div class="c-featured__item__image">
-                                    <img src="/storage/{{ $producto->imagen }}" alt="Product Photo">
-                                </div>
+                                <h3>{{ $producto->subcategoria->nombre }}</h3>
+                                <a href="/producto/{{ $producto->id }}" ws-add-cart-modal="211803"><span
+                                        class="c-icon "> <i class="fa fa-plus"></i> </span> Ver Detalles</a>
                             </div>
-                        @endforeach
-
-                    </div>
-                </section>
-
-
-                <div class="o-grid -xs-collapse " style="margin-top: 60px;">
-                    <div class="o-grid__column -lg-6 -sm-4 -xs-4">
-                        <div>
-                            <div class="c-call-to-action "
-                                style="background-image: url(/storage/aliven.jpg); background-repeat:no-repeat; background-size:960px 600px;">
-                                <h2
-                                    style="color:#f9690e; text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;">
-                                    Productos de Alivén</h2>
-                                <a href="/productos?categoria_id=2" class="c-button" role="button"
-                                    aria-label="View our best sellers." target="_self"><span
-                                        class="c-icon -arrow-right">‌</span></a>
+                            <div class="c-featured__item__image">
+                                <img src="/storage/{{ $producto->imagen }}" alt="Product Photo">
                             </div>
+
                         </div>
-                    </div>
-                    <div class="o-grid__column -lg-6 -sm-4 -xs-4">
-                        <div>
-                            <div class="c-call-to-action " style="background-image: url(/storage/concreto1.jpg)">
-                                <h2
-                                    style="color:#f9690e;text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;">
-                                    Productos de Concreto</h2>
-                                <a href="/productos?categoria_id=1" class="c-button" role="button"
-                                    aria-label="Find your wine." target="_self"><span
-                                        class="c-icon -arrow-right">‌</span></a>
-                            </div>
+                    @endforeach
+
+                </div>
+            </section>
+
+            <div class="o-grid -xs-collapse " style="margin-top: 60px;">
+                <div class="o-grid__column -lg-6 -sm-4 -xs-4">
+                    <div>
+                        <div class="c-call-to-action "
+                            style="background-image: url(/storage/aliven.jpg); background-repeat:no-repeat; background-size:960px 600px;">
+                            <h2
+                                style="color:#f9690e; text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;">
+                                Productos de Alivén</h2>
+                            <a href="/productos?categoria_id=2" class="c-button" role="button"
+                                aria-label="View our best sellers." target="_self"><span
+                                    class="c-icon -arrow-right">‌</span></a>
                         </div>
                     </div>
                 </div>
-            </section>
+                <div class="o-grid__column -lg-6 -sm-4 -xs-4">
+                    <div>
+                        <div class="c-call-to-action " style="background-image: url(/storage/concreto1.jpg)">
+                            <h2
+                                style="color:#f9690e;text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;">
+                                Productos de Concreto</h2>
+                            <a href="/productos?categoria_id=1" class="c-button" role="button"
+                                aria-label="Find your wine." target="_self"><span
+                                    class="c-icon -arrow-right">‌</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
 
             <section>
 

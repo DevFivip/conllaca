@@ -28,6 +28,12 @@ img {
 :before {
     box-sizing: border-box;
 }
+
+
+
+
+
+
 body,
 html {
     border: none;
@@ -1466,7 +1472,7 @@ li {
 .c-account__sidebar h3 {
     letter-spacing: 2px;
     letter-spacing: 0.125rem;
-    font-family: "Knockout 48 A", "Knockout 48 B", sans-serif;
+    font-family: "Knockout", "Knockout", sans-serif;
     font-size: 20px;
     font-size: 1.25rem;
     font-weight: 400;
@@ -1970,7 +1976,7 @@ li {
     display: inline-block;
 }
 .c-cart__checkout__list__action {
-    font-family: "Knockout 48 A", "Knockout 48 B", sans-serif;
+    font-family: "Knockout", "Knockout", sans-serif;
     font-size: 18px;
     font-size: 1.125rem;
     font-weight: 400;
@@ -2148,7 +2154,7 @@ li {
 .c-cart__checkout h3,
 .c-cart__checkout__product.c-product .c-product__category,
 .c-cart__checkout__section__action {
-    font-family: "Knockout 48 A", "Knockout 48 B", sans-serif;
+    font-family: "Knockout", "Knockout", sans-serif;
     font-weight: 400;
 }
 .c-cart__checkout__product.c-product .c-product__category {
@@ -2463,7 +2469,7 @@ li {
 .c-cart__product__disclaimer__restrictions a,
 .c-cart__product__discounteligible a {
     padding-top: 6px;
-    font-family: "Knockout 48 A", "Knockout 48 B", sans-serif;
+    font-family: "Knockout", "Knockout", sans-serif;
     display: inline-block;
 }
 .c-cart__product__disclaimer__restrictions a {
@@ -2531,7 +2537,7 @@ li {
 .c-cart__product__remove {
     letter-spacing: 2px;
     letter-spacing: 0.125rem;
-    font-family: "Knockout 48 A", "Knockout 48 B", sans-serif;
+    font-family: "Knockout", "Knockout", sans-serif;
     font-size: 18px;
     font-size: 1.125rem;
     font-weight: 400;
@@ -2781,7 +2787,7 @@ li {
 .c-featured__item__category,
 .c-filter-card > span {
     font-weight: 400;
-    font-family: "Knockout 48 A", "Knockout 48 B", sans-serif;
+    font-family: "Knockout", "Knockout", sans-serif;
     text-transform: uppercase;
 }
 .c-dialog__modal__section:first-child {
@@ -2974,7 +2980,7 @@ li {
     }
     .c-featured .c-featured__item__desc {
         float: left;
-        width: calc(100% - 60px);
+        /* width: calc(100% - 60px); */
     }
     .c-featured .c-featured__item__image {
         display: inline-block;
@@ -3169,7 +3175,7 @@ li {
 .c-filter-modal .c-filter-group .c-filter-button label > span {
     margin-left: auto;
     margin-right: auto;
-    font-family: "Knockout 48 A", "Knockout 48 B", sans-serif;
+    font-family: "Knockout", "Knockout", sans-serif;
     font-size: 16px;
     font-size: 1rem;
     font-weight: 400;
@@ -3247,7 +3253,7 @@ li {
 .c-filter-panel {
     height: 170px;
     height: 10.625rem;
-    font-family: "Knockout 48 A", "Knockout 48 B", sans-serif;
+    font-family: "Knockout", "Knockout", sans-serif;
     font-size: 20px;
     font-size: 1.25rem;
     font-weight: 400;
@@ -3363,7 +3369,7 @@ li {
 }
 .c-filter-panel__actions a,
 .c-footer__nav > ul > li > a {
-    font-family: "Knockout 48 A", "Knockout 48 B", sans-serif;
+    font-family: "Knockout", "Knockout", sans-serif;
 }
 .c-filter-panel__actions::after,
 .c-filter-panel__active-filters::after {
@@ -3651,7 +3657,7 @@ li {
 .c-header__nav nav > ul > li > a,
 .c-hero__overlay h1,
 .c-hours table caption {
-    font-family: "Knockout 48 A", "Knockout 48 B", sans-serif;
+    font-family: "Knockout", "Knockout", sans-serif;
 }
 .c-header__eyebrow ul > li::before {
     display: inline-block;
@@ -4002,6 +4008,15 @@ li {
     font-weight: 400;
     font-style: normal;
 }
+
+@font-face {
+    font-family: Knockout;
+    src: url(../fonts/Knockout.otf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+
 .c-icon {
     font-family: icomoon !important;
     speak: none;
@@ -4017,7 +4032,7 @@ li {
 }
 .c-mobile-menu__inner > ul > li > a,
 .c-order-history__item__header__count p {
-    font-family: "Knockout 48 A", "Knockout 48 B", sans-serif;
+    font-family: "Knockout", "Knockout", sans-serif;
 }
 .c-icon.-search:before {
     content: "";
@@ -4796,7 +4811,7 @@ li {
 }
 .c-order-history__item__header__title p,
 .c-product__category {
-    font-family: "Knockout 48 A", "Knockout 48 B", sans-serif;
+    font-family: "Knockout", "Knockout", sans-serif;
 }
 .c-pager__action,
 .c-pager__pages {
@@ -5187,7 +5202,7 @@ li {
     text-transform: uppercase;
 }
 .c-product__relevance__description p.c-product__relevance__description__match {
-    font-family: "Knockout 48 A", "Knockout 48 B", sans-serif;
+    font-family: "Knockout", "Knockout", sans-serif;
     font-size: 16px;
     font-size: 1rem;
     font-weight: 400;
@@ -5321,7 +5336,7 @@ li {
 }
 .c-product-detail__category,
 .c-product-detail__vintage {
-    font-family: "Knockout 48 A", "Knockout 48 B", sans-serif;
+    font-family: "Knockout", "Knockout", sans-serif;
 }
 .c-product > button:active,
 .c-product > button:focus,
@@ -5407,7 +5422,7 @@ li {
         font-size: 1.25rem;
     }
     .c-product-detail__description {
-        width: 70%;
+        width: 40%;
         float: left;
     }
 }
@@ -6045,7 +6060,7 @@ select[selectize] {
     padding-left: 5.625rem;
 }
 .c-search-bar__results .c-product .c-product__category {
-    font-family: "Knockout 48 A", "Knockout 48 B", sans-serif;
+    font-family: "Knockout", "Knockout", sans-serif;
     font-size: 16px;
     font-size: 1rem;
     font-weight: 400;
@@ -6501,7 +6516,7 @@ select[selectize] {
     }
 }
 .c-sidebar h1 {
-    font-family: "Knockout 48 A", "Knockout 48 B", sans-serif;
+    font-family: "Knockout", "Knockout", sans-serif;
     font-size: 20px;
     font-size: 1.25rem;
     font-weight: 400;

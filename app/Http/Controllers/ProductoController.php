@@ -80,7 +80,6 @@ class ProductoController extends Controller
     public function edit($id)
     {
         //
-
         $categorias = Categoria::all();
         $subcategorias = Subcategoria::all();
         $producto = Producto::find($id);

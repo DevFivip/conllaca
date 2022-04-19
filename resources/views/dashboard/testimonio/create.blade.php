@@ -31,14 +31,11 @@
                                 <input type="text" name="title" class="form-control" value="">
                             </div>
 
-
                             <div class=" form-group">
                                 <label for="descripcion">Descripción</label>
                                 <textarea class="form-control" name="descripcion" id="" rows="10"></textarea>
                             </div>
-
-                            <br>
-                            <br>
+                         
                             <button type="submit" class="btn btn-primary mb-2">Guardar</button>
 
                         </form>

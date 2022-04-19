@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Producto extends Model
 {
-    use HasFactory;
+    use HasFactory; 
 
     public $fillable = [
         'producto_nombre',
@@ -16,7 +16,7 @@ class Producto extends Model
         'descripcion',
         'precio',
         'imagen',
-
+        'slug',
     ];
 
 
@@ -30,4 +30,15 @@ class Producto extends Model
     {
         return $this->belongsTo(Subcategoria::class);
     }
+
+    protected static function boot()
+    {
+        parent::boot();
+        static::created(function ($blog) {
+            $blog->slug = $blog->initSlug($blog->title);
+            $blog->save();
+        });
+    }
+
+
 }

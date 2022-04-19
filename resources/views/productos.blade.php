@@ -10,9 +10,8 @@
     <meta http-equiv="Content-Language" content="es-VE">
     <meta name="language" content="es-VE">
     <meta name="Copyright" content="Copyright (c) 2022 Concretera de los Llanos Centrales. C.A.">
-    <link href="https://winestore-online.com/Themes/Winestore/assets/images/favicon.ico" rel="shortcut icon"
-        type="image/ico">
-    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7331616/7007392/css/fonts.css">
+    <link href="https://winestore-online.com/Themes/Winestore/assets/images/favicon.ico" rel="shortcut icon" type="image/ico">
+    {{-- <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7331616/7007392/css/fonts.css"> --}}
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <style>
@@ -34,36 +33,29 @@
         .my-float {
             margin-top: 16px;
         }
-
     </style>
 </head>
 
 <body>
 
     <div class="c-site-wrapper">
-
         <header class="c-header">
-
             <div class="c-header__nav">
                 <div class="o-grid">
                     <div class="o-grid__column -lg-12 -sm-8 -xs-4">
                         <a href="/" class="c-header__nav__logo">
-                            <img src="/Themes/Winestore/Assets/images/winestore-logo.svg" alt="concretera">
+                            <a href="/" class="c-header__nav__logo">
+                                <img src="/storage/{{$info->logo}}" alt="Concretera">
+                            </a>
                         </a>
                         <nav>
                             <ul>
-                                <nav>
-                                    <ul>
-                                        <li>
-                                            <a href="/productos" class="-active">Nuestros&nbsp;Productos</a>
-                                        </li>
-
-                                        <li>
-                                            <a href="/contactanos" class="">Contactanos</a>
-                                        </li>
-
-                                    </ul>
-                                </nav>
+                                <li>
+                                    <a href="/productos" class="-active">Nuestros&nbsp;Productos</a>
+                                </li>
+                                <li>
+                                    <a href="/contactanos" class="">Contactanos</a>
+                                </li>
                             </ul>
                         </nav>
                         <div class="c-header__nav__mobile">
@@ -105,8 +97,7 @@
 
         <main id="main" class="c-main">
 
-            <a href="https://api.whatsapp.com/send?phone={{ $info->whatapp }}&text=Hola,Buen dia!"
-                class="float" target="_blank">
+            <a href="https://api.whatsapp.com/send?phone={{ $info->whatapp }}&text=Hola,Buen dia!" class="float" target="_blank">
                 <i class="fa fa-whatsapp my-float"></i>
             </a>
             <div class="o-grid -md-collapse">
@@ -114,13 +105,11 @@
 
                 <div class="o-grid__column -md-12 -md-visible" style="margin-top: 5px">
                     @foreach ($categorias as $categoria)
-                        <a href="/productos?categoria_id={{ $categoria->id }}"
-                            class="c-button">{{ $categoria->nombre }}</a>
+                    <a href="/productos?categoria_id={{ $categoria->id }}" class="c-button">{{ $categoria->nombre }}</a>
                     @endforeach
 
                     @foreach ($subcategorias as $subcategoria)
-                        <a href="/productos?subcategoria_id={{ $subcategoria->id }}" style="margin-top: 5px"
-                            class="c-button">{{ $subcategoria->nombre }}</a>
+                    <a href="/productos?subcategoria_id={{ $subcategoria->id }}" style="margin-top: 5px" class="c-button">{{ $subcategoria->nombre }}</a>
                     @endforeach
 
                     <a href="/productos" class="c-button" style="margin-top: 5px">VER TODOS</a>
@@ -134,13 +123,11 @@
 
                     <div class="o-grid__column -md-12 -md-hidden" style="margin-top: 5px">
                         @foreach ($categorias as $categoria)
-                            <a href="/productos?categoria_id={{ $categoria->id }}"
-                                class="c-button">{{ $categoria->nombre }}</a>
+                        <a href="/productos?categoria_id={{ $categoria->id }}" class="c-button">{{ $categoria->nombre }}</a>
                         @endforeach
 
                         @foreach ($subcategorias as $subcategoria)
-                            <a href="/productos?subcategoria_id={{ $subcategoria->id }}"
-                                class="c-button">{{ $subcategoria->nombre }}</a>
+                        <a href="/productos?subcategoria_id={{ $subcategoria->id }}" class="c-button">{{ $subcategoria->nombre }}</a>
                         @endforeach
                     </div>
 
@@ -152,26 +139,26 @@
                     <h1 class="-md-hidden">Listado de Nuestros Productos</h1>
                     <div product-list="">
                         @foreach ($paginate->items() as $producto)
-                            <div class="c-product">
-                                <div class="c-product__category">{{ $producto['categoria']['nombre'] }}</div>
-                                <h2><a
-                                        href="producto/{{ $producto['id'] }}">{{ $producto['producto_nombre'] }}</a>
-                                </h2>
-                                <div class="c-pricetag">
-                                    <div class="c-pricetag__price" aria-hidden="true">
-                                        {{ $producto['precio'] }}
-                                    </div>
-                                    <span class="sr-only">{{ $producto['precio'] }}</span>
+                        <div class="c-product">
+                            <div class="c-product__category">{{ $producto['categoria']['nombre'] }}</div>
+                            <h2><a href="producto/{{ $producto['id'] }}">{{ $producto['producto_nombre'] }}</a>
+                            </h2>
+                            <div class="c-pricetag">
+                                <div class="c-pricetag__price" aria-hidden="true">
+                                    {{ $producto['precio'] }}
                                 </div>
-                                <div class="c-product__imagebox">
-                                    <img src="/storage/{{ $producto['imagen'] }}"
-                                        alt="{{ $producto['producto_nombre'] }}" style="max-height:100px">
-                                </div>
-                                <p class="c-product__description -sm-hidden">
-                                    {{ $producto['descripcion'] }}
-                                </p>
-                                <button type="button" onclick="goto({{ $producto['id'] }})">Ver Detalles</button>
+                                <span class="sr-only">{{ $producto['precio'] }}</span>
                             </div>
+                            <div class="c-product__imagebox">
+                                <img src="/storage/{{ $producto['imagen'] }}" alt="{{ $producto['producto_nombre'] }}" style="max-height:100px">
+                            </div>
+                            <p class="c-product__description -sm-hidden">
+                                {{ $producto['descripcion'] }}
+                            </p>
+                            <a href="/producto/{{ $producto->id }}" ws-add-cart-modal="211803"><span class="c-icon "> <i class="fa fa-plus"></i> </span> Ver Detalles</a>
+
+                            {{-- <button type="button" onclick="goto({{ $producto['id'] }})">Ver Detalles</button> --}}
+                        </div>
                         @endforeach
                     </div>
 
@@ -187,16 +174,13 @@
                     <section class="c-footer__follow">
                         <h1>Siguenos en Nuestras Redes Sociales</h1>
                         @if (isset($redes['Instagram']))
-                            <a href="{{ $redes['Instagram'] }}" class="c-icon -social-instagram" title="Instagram"
-                                target="_blank">‌</a>
+                        <a href="{{ $redes['Instagram'] }}" class="c-icon -social-instagram" title="Instagram" target="_blank">‌</a>
                         @endif
                         @if (isset($redes['Twitter']))
-                            <a href="{{ $redes['Twitter'] }}" class="c-icon -social-twitter" title="Twitter"
-                                target="_blank">‌</a>
+                        <a href="{{ $redes['Twitter'] }}" class="c-icon -social-twitter" title="Twitter" target="_blank">‌</a>
                         @endif
                         @if (isset($redes['Facebook']))
-                            <a href="{{ $redes['Facebook'] }}" class="c-icon -social-facebook" title="Facebook"
-                                target="_blank">‌</a>
+                        <a href="{{ $redes['Facebook'] }}" class="c-icon -social-facebook" title="Facebook" target="_blank">‌</a>
                         @endif
                     </section>
                     <div class="c-footer__copyright">
@@ -223,16 +207,13 @@
                     <section class="c-footer__follow -sm-visible">
                         <h1>Siguenos en Nuestras Redes Sociales</h1>
                         @if (isset($redes['Instagram']))
-                            <a href="{{ $redes['Instagram'] }}" class="c-icon -social-instagram" title="Instagram"
-                                target="_blank">‌</a>
+                        <a href="{{ $redes['Instagram'] }}" class="c-icon -social-instagram" title="Instagram" target="_blank">‌</a>
                         @endif
                         @if (isset($redes['Twitter']))
-                            <a href="{{ $redes['Twitter'] }}" class="c-icon -social-twitter" title="Twitter"
-                                target="_blank">‌</a>
+                        <a href="{{ $redes['Twitter'] }}" class="c-icon -social-twitter" title="Twitter" target="_blank">‌</a>
                         @endif
                         @if (isset($redes['Facebook']))
-                            <a href="{{ $redes['Facebook'] }}" class="c-icon -social-facebook" title="Facebook"
-                                target="_blank">‌</a>
+                        <a href="{{ $redes['Facebook'] }}" class="c-icon -social-facebook" title="Facebook" target="_blank">‌</a>
                         @endif
                     </section>
                     {{-- <section class="c-footer__newsletter">
@@ -279,6 +260,7 @@
         function goto(id) {
             window.location.href = "/producto/" + id;
         }
+
         function openMenu() {
             menu = document.getElementById('menu-mobil');
             menu.classList.add('-active');
