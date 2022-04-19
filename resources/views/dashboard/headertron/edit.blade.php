@@ -26,7 +26,6 @@
                                 <input type="text" name="title" class="form-control" value="{{ $headertron->title }}">
                             </div>
 
-
                             <div class=" form-group">
                                 <label for="descripcion">Descripción</label>
                                 <textarea class="form-control" name="descripcion" id=""

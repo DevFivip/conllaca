@@ -6,7 +6,6 @@
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">{{ __('Editar Categorias de Productos') }}</div>
-
                     <div class="card-body">
                         <form action="{{ route('categoria.update', $categoria['id']) }}" method="POST"
                             enctype="multipart/form-data">

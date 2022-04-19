@@ -8,9 +8,9 @@
                     <div class="card-header">{{ __('Subcategorias de Productos') }}</div>
 
                     <div class="card-body">
-                        <a href="/subcategoria/create" class="btn btn-primary">+ Subcategoria</a>
+                        <a href="/home/subcategoria/create" class="btn btn-primary">+ Subcategoria</a>
                         &nbsp;
-                        <a href="/categoria/create" class="btn btn-primary">+ Categoria</a>
+                        <a href="/home/categoria/create" class="btn btn-primary">+ Categoria</a>
 
                         <table class="table table-striped table-hover">
                             <thead>
@@ -28,7 +28,7 @@
                                         <td>{{ $subcategoria->nombre }}</td>
                                         <td>{{ $subcategoria->categoria->nombre }}</td>
                                         <td>
-                                            <a href="/subcategoria/{{ $subcategoria->id }}/edit">✏️</a>
+                                            <a href="home/subcategoria/{{ $subcategoria->id }}/edit">✏️</a>
                                             <a href="#eliminar" onclick="eliminar({{ $subcategoria->id }})">🗑️</a>
                                         </td>
                                     </tr>
@@ -40,7 +40,7 @@
 
                             async function eliminar(id) {
                                 if (confirm("¿Seguro deseas Eliminar?") == true) {
-                                    const res = await fetch('subcategoria/' + id, {
+                                    const res = await fetch('/home/subcategoria/' + id, {
                                         method: 'DELETE',
                                         headers: {
                                             "Content-Type": "application/json",

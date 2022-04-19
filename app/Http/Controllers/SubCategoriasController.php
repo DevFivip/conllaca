@@ -37,7 +37,7 @@ class SubCategoriasController extends Controller
     {
         $data = $request->all();
         Subcategoria::create($data);
-        return redirect('subcategoria');
+        return redirect('home/subcategoria');
         //
 
     }
@@ -82,7 +82,7 @@ class SubCategoriasController extends Controller
         $subcategoria = Subcategoria::find($id);
         $subcategoria->update($data);
 
-        return redirect('subcategoria');
+        return redirect('home/subcategoria');
 
         //
     }

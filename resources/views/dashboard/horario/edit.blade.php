@@ -27,8 +27,6 @@
                                 <label for="cierre">Cierre</label>
                                 <input type="text" name="cierre" class="form-control" value="{{ $horario->cierre }}">
                             </div>
-
-
                             <br>
                             <button type="submit" class="btn btn-primary mb-2">Guardar</button>
 

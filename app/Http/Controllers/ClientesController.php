@@ -56,7 +56,7 @@ class ClientesController extends Controller
 
         $cliente = Cliente::create($data);
 
-        return redirect('cliente');
+        return redirect('home/cliente');
     }
 
     /**
@@ -106,7 +106,7 @@ class ClientesController extends Controller
         $cliente = Cliente::find($id);
         $cliente->update($data);
 
-        return redirect('cliente');
+        return redirect('home/cliente');
     }
 
     /**

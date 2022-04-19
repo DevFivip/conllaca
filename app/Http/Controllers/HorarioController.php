@@ -82,7 +82,7 @@ class HorarioController extends Controller
 
         $horario->update($data);
 
-        return redirect('horario');
+        return redirect('home/horario');
     }
 
     /**

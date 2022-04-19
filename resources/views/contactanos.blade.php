@@ -9,15 +9,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
     <meta http-equiv="Content-Language" content="es-VE">
     <meta name="language" content="es-VE">
+    <link rel="canonical" href="{{url()->current()}}" />
     <meta name="Copyright" content="Copyright (c) 2022 Concretera de los Llanos Centrales. C.A.">
-    <link href="https://winestore-online.com/Themes/Winestore/assets/images/favicon.ico" rel="shortcut icon"
-        type="image/ico">
-    {{-- <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7331616/7007392/css/fonts.css"> --}}
+    <link href="/storage/favicon.ico" rel="shortcut icon" type="image/ico">
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-        crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
     <style>
         .float {
             position: fixed;
@@ -41,7 +38,6 @@
         #map {
             height: 500px;
         }
-
     </style>
 </head>
 
@@ -55,8 +51,7 @@
                 <div class="o-grid">
                     <div class="o-grid__column -lg-12 -sm-8 -xs-4">
                         <a href="/" class="c-header__nav__logo">
-                            <img src="/storage/{{$info->logo}}"
-                                alt="Concretera">
+                            <img src="/storage/{{$info->logo}}" alt="Concretera">
                         </a>
                         <nav>
                             <ul>
@@ -112,8 +107,7 @@
 
         <main id="main" class="c-main">
 
-            <a href="https://api.whatsapp.com/send?phone={{ $info->whatapp }}&text=Hola,Buen dia!"
-                class="float" target="_blank">
+            <a href="https://api.whatsapp.com/send?phone={{ $info->whatapp }}&text=Hola,Buen dia!" class="float" target="_blank">
                 <i class="fa fa-whatsapp my-float"></i>
             </a>
             <div class="o-grid -md-collapse">
@@ -130,8 +124,7 @@
                     <div id="map"></div>
 
 
-                    <p> <a class="c-button"
-                            href="https://api.whatsapp.com/send?phone={{ $informacion->whatapp }}&text=Buen dia">
+                    <p> <a class="c-button" href="https://api.whatsapp.com/send?phone={{ $informacion->whatapp }}&text=Buen dia">
                             <i class="fa fa-whatsapp"></i>&nbsp;Escribir al WhatApp</a></p>
 
                     <h2 class="-md-hidden">Teléfonos</h2>
@@ -154,16 +147,13 @@
                     <section class="c-footer__follow">
                         <h1>Siguenos en Nuestras Redes Sociales</h1>
                         @if (isset($redes['Instagram']))
-                            <a href="{{ $redes['Instagram'] }}" class="c-icon -social-instagram" title="Instagram"
-                                target="_blank">‌</a>
+                        <a href="{{ $redes['Instagram'] }}" class="c-icon -social-instagram" title="Instagram" target="_blank">‌</a>
                         @endif
                         @if (isset($redes['Twitter']))
-                            <a href="{{ $redes['Twitter'] }}" class="c-icon -social-twitter" title="Twitter"
-                                target="_blank">‌</a>
+                        <a href="{{ $redes['Twitter'] }}" class="c-icon -social-twitter" title="Twitter" target="_blank">‌</a>
                         @endif
                         @if (isset($redes['Facebook']))
-                            <a href="{{ $redes['Facebook'] }}" class="c-icon -social-facebook" title="Facebook"
-                                target="_blank">‌</a>
+                        <a href="{{ $redes['Facebook'] }}" class="c-icon -social-facebook" title="Facebook" target="_blank">‌</a>
                         @endif
                     </section>
                     <div class="c-footer__copyright">
@@ -189,16 +179,13 @@
                     <section class="c-footer__follow -sm-visible">
                         <h1>Siguenos en Nuestras Redes Sociales</h1>
                         @if (isset($redes['Instagram']))
-                            <a href="{{ $redes['Instagram'] }}" class="c-icon -social-instagram" title="Instagram"
-                                target="_blank">‌</a>
+                        <a href="{{ $redes['Instagram'] }}" class="c-icon -social-instagram" title="Instagram" target="_blank">‌</a>
                         @endif
                         @if (isset($redes['Twitter']))
-                            <a href="{{ $redes['Twitter'] }}" class="c-icon -social-twitter" title="Twitter"
-                                target="_blank">‌</a>
+                        <a href="{{ $redes['Twitter'] }}" class="c-icon -social-twitter" title="Twitter" target="_blank">‌</a>
                         @endif
                         @if (isset($redes['Facebook']))
-                            <a href="{{ $redes['Facebook'] }}" class="c-icon -social-facebook" title="Facebook"
-                                target="_blank">‌</a>
+                        <a href="{{ $redes['Facebook'] }}" class="c-icon -social-facebook" title="Facebook" target="_blank">‌</a>
                         @endif
                     </section>
                     {{-- <section class="c-footer__newsletter">
@@ -243,9 +230,7 @@
 
 
     <!-- Concretera de los Llanos Centrales. C.A.. All Rights Reserved. -->
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-        crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 
 
     <script>

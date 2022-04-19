@@ -3,6 +3,7 @@
 
 <head>
     <title>Concretera de los Llanos Centrales. C.A </title>
+    <meta name="description" content="{{ $informacion->empresa_descripcion }}">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
@@ -10,11 +11,10 @@
     <meta http-equiv="Content-Language" content="es-VE">
     <meta name="language" content="es-VE">
     <meta name="Copyright" content="Copyright (c) 2022 Concretera de los Llanos Centrales. C.A.">
-    <link href="https://winestore-online.com/Themes/Winestore/assets/images/favicon.ico" rel="shortcut icon"
-        type="image/ico">
-    {{-- <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7331616/7007392/css/fonts.css"> --}}
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/theme.css">
+    <link rel="canonical" href="{{url()->current()}}"/>
+    <link rel="icon" href="/storage/favicon.ico" sizes="16x16">
     <style>
         .float {
             position: fixed;
@@ -124,7 +124,7 @@
                                     {{ $producto->categoria->nombre }}
                                 </div>
                                 <h2>
-                                    <a href="/producto/{{ $producto->id }}">
+                                    <a href="/producto/{{ $producto->slug }}">
                                         {{ $producto->producto_nombre }}
                                     </a>
                                 </h2>
@@ -135,7 +135,7 @@
 
                                 </div>
                                 <h3>{{ $producto->subcategoria->nombre }}</h3>
-                                <a href="/producto/{{ $producto->id }}" ws-add-cart-modal="211803"><span
+                                <a href="/producto/{{ $producto->slug }}" ws-add-cart-modal="211803"><span
                                         class="c-icon "> <i class="fa fa-plus"></i> </span> Ver Detalles</a>
                             </div>
                             <div class="c-featured__item__image">

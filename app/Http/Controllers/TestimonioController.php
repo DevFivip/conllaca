@@ -53,7 +53,7 @@ class TestimonioController extends Controller
 
         $testimonio = Testimonio::create($data);
 
-        return redirect('testimonio');
+        return redirect('home/testimonio');
     }
 
     /**
@@ -106,7 +106,7 @@ class TestimonioController extends Controller
         $testimonio = Testimonio::find($id);
         $testimonio->update($data);
 
-        return redirect('testimonio');
+        return redirect('home/testimonio');
     }
 
     /**

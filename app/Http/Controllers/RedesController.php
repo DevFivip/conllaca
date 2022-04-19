@@ -79,7 +79,7 @@ class RedesController extends Controller
 
         $res = $red->update($data);
 
-        return redirect('redes');
+        return redirect('home/redes');
     }
 
     /**

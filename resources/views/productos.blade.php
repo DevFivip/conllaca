@@ -2,7 +2,7 @@
 <html lang="es-VE">
 
 <head>
-    <title>Concretera de los Llanos Centrales. C.A </title>
+    <title>Concretera de los Llanos Centrales. C.A | Productos</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
@@ -10,10 +10,12 @@
     <meta http-equiv="Content-Language" content="es-VE">
     <meta name="language" content="es-VE">
     <meta name="Copyright" content="Copyright (c) 2022 Concretera de los Llanos Centrales. C.A.">
-    <link href="https://winestore-online.com/Themes/Winestore/assets/images/favicon.ico" rel="shortcut icon" type="image/ico">
-    {{-- <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7331616/7007392/css/fonts.css"> --}}
-    <link rel="stylesheet" href="css/theme.css">
+    <meta name="description" content="Conoce nuestros productos mas relevantes">
+    <link rel="canonical" href="{{url()->current()}}"/>
+    <link rel="stylesheet" href="/css/theme.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="icon" href="/storage/favicon.ico" sizes="16x16">
+
     <style>
         .float {
             position: fixed;
@@ -141,7 +143,7 @@
                         @foreach ($paginate->items() as $producto)
                         <div class="c-product">
                             <div class="c-product__category">{{ $producto['categoria']['nombre'] }}</div>
-                            <h2><a href="producto/{{ $producto['id'] }}">{{ $producto['producto_nombre'] }}</a>
+                            <h2><a href="producto/{{ $producto['slug'] }}">{{ $producto['producto_nombre'] }}</a>
                             </h2>
                             <div class="c-pricetag">
                                 <div class="c-pricetag__price" aria-hidden="true">
@@ -155,9 +157,8 @@
                             <p class="c-product__description -sm-hidden">
                                 {{ $producto['descripcion'] }}
                             </p>
-                            <a href="/producto/{{ $producto->id }}" ws-add-cart-modal="211803"><span class="c-icon "> <i class="fa fa-plus"></i> </span> Ver Detalles</a>
+                            <a href="/producto/{{ $producto->slug }}" ws-add-cart-modal="211803"><span class="c-icon "> <i class="fa fa-plus"></i> </span> Ver Detalles</a>
 
-                            {{-- <button type="button" onclick="goto({{ $producto['id'] }})">Ver Detalles</button> --}}
                         </div>
                         @endforeach
                     </div>

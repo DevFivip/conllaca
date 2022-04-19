@@ -24,7 +24,7 @@
                                         <td>{{ $horario->apertura }}</td>
                                         <td>{{ $horario->cierre }}</td>
                                         <td>
-                                            <a href="/horario/{{ $horario->id }}/edit">✏️</a>
+                                            <a href="/home/horario/{{ $horario->id }}/edit">✏️</a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -35,7 +35,7 @@
 
                             async function eliminar(id) {
                                 if (confirm("¿Seguro deseas Eliminar?") == true) {
-                                    const res = await fetch('horario/' + id, {
+                                    const res = await fetch('/home/horario/' + id, {
                                         method: 'DELETE',
                                         headers: {
                                             "Content-Type": "application/json",

@@ -97,7 +97,7 @@ class InformacionController extends Controller
         $info = Informacion::find($id);
         $info->update($data);
 
-        return redirect('home');
+        return redirect('home/home');
     }
 
     /**

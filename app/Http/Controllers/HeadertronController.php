@@ -54,7 +54,7 @@ class HeadertronController extends Controller
 
         $headertron = Headertron::create($data);
 
-        return redirect('headertron');
+        return redirect('home/headertron');
     }
 
     /**
@@ -109,7 +109,7 @@ class HeadertronController extends Controller
         $headertron = Headertron::find($id);
         $headertron->update($data);
 
-        return redirect('headertron');
+        return redirect('home/headertron');
     }
 
     /**

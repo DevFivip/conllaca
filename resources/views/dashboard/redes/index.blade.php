@@ -22,7 +22,7 @@
                                         <td>{{ $red->nombre }}</td>
                                         <td>{{ $red->url }}</td>
                                         <td>
-                                            <a href="/redes/{{ $red->id }}/edit">✏️</a>
+                                            <a href="/home/redes/{{ $red->id }}/edit">✏️</a>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -33,7 +33,7 @@
 
                             async function eliminar(id) {
                                 if (confirm("¿Seguro deseas Eliminar?") == true) {
-                                    const res = await fetch('redes/' + id, {
+                                    const res = await fetch('/home/redes/' + id, {
                                         method: 'DELETE',
                                         headers: {
                                             "Content-Type": "application/json",

@@ -40,7 +40,7 @@ class CategoriasController extends Controller
     {
         $data = $request->all();
         Categoria::create($data);
-        return redirect('categoria');
+        return redirect('home/categoria');
         //
 
     }
@@ -86,7 +86,7 @@ class CategoriasController extends Controller
 
         $cat->update($data);
 
-        return redirect('categoria');
+        return redirect('home/categoria');
 
 
         //

@@ -56,9 +56,9 @@ Route::get('/productos', function (Request $request) {
     return view('productos', compact('paginate', 'info', 'categorias', 'subcategorias', 'redes'));
 });
 
-Route::get('/producto/{id}', function ($id) {
+Route::get('/producto/{slug}', function ($slug) {
     $info = Informacion::first();
-    $producto = Producto::with(['categoria', 'subcategoria'])->find($id);
+    $producto = Producto::with(['categoria', 'subcategoria'])->where('slug', $slug)->first();
     $redes = RedesSocial::all();
     $redes = $redes->pluck('url', 'nombre');
     $similares = Producto::with(['categoria', 'subcategoria'])->whereKeyNot($producto->id)->where('categoria_id', $producto->categoria_id)->limit(3)->orderBy('updated_at', 'desc')->get();
@@ -74,11 +74,6 @@ Route::get('/contactanos', function () {
 });
 
 
-
-
-
-
-
 Auth::routes([
     'register' => false, // Registration Routes...
     'reset' => false, // Password Reset Routes...
@@ -88,17 +83,16 @@ Auth::routes([
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
+Route::resource('home/informacion', InformacionController::class);
+Route::resource('home/categoria', CategoriasController::class);
+Route::resource('home/subcategoria', SubCategoriasController::class);
+Route::resource('home/producto', ProductoController::class);
 
-Route::resource('informacion', InformacionController::class);
-Route::resource('categoria', CategoriasController::class);
-Route::resource('subcategoria', SubCategoriasController::class);
-Route::resource('producto', ProductoController::class);
-
-Route::resource('cliente', ClientesController::class);
-Route::resource('testimonio', TestimonioController::class);
+Route::resource('home/cliente', ClientesController::class);
+Route::resource('home/testimonio', TestimonioController::class);
 
 
-Route::resource('headertron', HeadertronController::class);
-Route::resource('horario', HorarioController::class);
+Route::resource('home/headertron', HeadertronController::class);
+Route::resource('home/horario', HorarioController::class);
 
-Route::resource('redes', RedesController::class);
+Route::resource('home/redes', RedesController::class);

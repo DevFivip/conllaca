@@ -8,7 +8,7 @@
                     <div class="card-header">{{ __('Cliente') }}</div>
 
                     <div class="card-body">
-                        <a href="/cliente/create" class="btn btn-primary">+ Cliente</a>
+                        <a href="/home/cliente/create" class="btn btn-primary">+ Cliente</a>
                         &nbsp;
                         <table class="table table-striped table-hover">
                             <thead>
@@ -31,7 +31,7 @@
                                         <td>{{ $cliente->title }}</td>
                                         <td>{{ $cliente->descripcion }}</td>
                                         <td>
-                                            <a href="/cliente/{{ $cliente->id }}/edit">✏️</a>
+                                            <a href="/home/cliente/{{ $cliente->id }}/edit">✏️</a>
                                             <a href="#eliminar" onclick="eliminar({{ $cliente->id }})">🗑️</a>
                                         </td>
                                     </tr>
@@ -43,7 +43,7 @@
 
                             async function eliminar(id) {
                                 if (confirm("¿Seguro deseas Eliminar?") == true) {
-                                    const res = await fetch('cliente/' + id, {
+                                    const res = await fetch('/home/cliente/' + id, {
                                         method: 'DELETE',
                                         headers: {
                                             "Content-Type": "application/json",
