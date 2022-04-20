@@ -13,7 +13,7 @@
     <meta name="Copyright" content="Copyright (c) 2022 Concretera de los Llanos Centrales. C.A.">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/theme.css">
-    <link rel="canonical" href="{{url()->current()}}"/>
+    <link rel="canonical" href="{{url()->current()}}" />
     <link rel="icon" href="/storage/favicon.ico" sizes="16x16">
     <style>
         .float {
@@ -34,7 +34,6 @@
         .my-float {
             margin-top: 16px;
         }
-
     </style>
 </head>
 
@@ -92,21 +91,18 @@
         <main id="main">
 
 
-            <a href="https://api.whatsapp.com/send?phone={{ $info->whatapp }}&text=Hola,Buen dia!"
-                class="float" target="_blank">
+            <a href="https://api.whatsapp.com/send?phone={{ $info->whatapp }}&text=Hola,Buen dia!" class="float" target="_blank">
                 <i class="fa fa-whatsapp my-float"></i>
             </a>
 
-            <section class="c-hero"
-                style="background-image: url(/storage/banner1.jpg);background-repeat:no-repeat;background-size:auto 900px;">
+            <section class="c-hero" style="background-image: url(/storage/banner1.jpg);background-repeat:no-repeat;background-size:auto 900px;">
                 <div class="c-hero__overlay">
                     <h1>lo que quieras construir, te ayudaremos!</h1>
                     <a href="/productos" target="_self" class="c-button">
                         Comprar<span class="c-icon -arrow-right">‌</span>
                     </a>
 
-                    <a href="https://api.whatsapp.com/send?phone={{ $info->whatapp }}&text=Hola,Buen dia!"
-                        target="_self" class="c-button -black">
+                    <a href="https://api.whatsapp.com/send?phone={{ $info->whatapp }}&text=Hola,Buen dia!" target="_self" class="c-button -black">
                         Contactanos Ya<span class="c-icon -arrow-right">‌</span>
                     </a>
 
@@ -118,31 +114,30 @@
                 <div class="c-featured__content">
 
                     @foreach ($productos as $producto)
-                        <div class="c-featured__item o-grid__column -lg-4 -md-6 -sm-12">
-                            <div class="c-featured__item__desc c-product">
-                                <div class="c-featured__item__category">
-                                    {{ $producto->categoria->nombre }}
-                                </div>
-                                <h2>
-                                    <a href="/producto/{{ $producto->slug }}">
-                                        {{ $producto->producto_nombre }}
-                                    </a>
+                    <div class="c-featured__item o-grid__column -lg-4 -md-6 -sm-12">
+                        <div class="c-featured__item__desc c-product">
+                            <div class="c-featured__item__category">
+                                {{ $producto->categoria->nombre }}
+                            </div>
+                            <h2>
+                                <a href="/producto/{{ $producto->slug }}">
+                                    {{ $producto->producto_nombre }}
+                                </a>
+                            </h2>
+                            <div class="c-pricetag">
+                                <h2 style="font-size:18px;">
+                                    {{ $producto->precio }}
                                 </h2>
-                                <div class="c-pricetag">
-                                    <h2 style="font-size:18px;">
-                                        {{ $producto->precio }}
-                                    </h2>
 
-                                </div>
-                                <h3>{{ $producto->subcategoria->nombre }}</h3>
-                                <a href="/producto/{{ $producto->slug }}" ws-add-cart-modal="211803"><span
-                                        class="c-icon "> <i class="fa fa-plus"></i> </span> Ver Detalles</a>
                             </div>
-                            <div class="c-featured__item__image">
-                                <img src="/storage/{{ $producto->imagen }}" alt="Product Photo">
-                            </div>
-
+                            <h3>{{ $producto->subcategoria->nombre }}</h3>
+                            <a href="/producto/{{ $producto->slug }}" ws-add-cart-modal="211803"><span class="c-icon "> <i class="fa fa-plus"></i> </span> Ver Detalles</a>
                         </div>
+                        <div class="c-featured__item__image">
+                            <img src="/storage/{{ $producto->imagen }}" alt="Product Photo">
+                        </div>
+
+                    </div>
                     @endforeach
 
                 </div>
@@ -151,26 +146,19 @@
             <div class="o-grid -xs-collapse " style="margin-top: 60px;">
                 <div class="o-grid__column -lg-6 -sm-4 -xs-4">
                     <div>
-                        <div class="c-call-to-action "
-                            style="background-image: url(/storage/aliven.jpg); background-repeat:no-repeat; background-size:960px 600px;">
-                            <h2
-                                style="color:#f9690e; text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;">
+                        <div class="c-call-to-action " style="background-image: url(/storage/aliven.jpg); background-repeat:no-repeat; background-size:960px 600px;">
+                            <h2 style="color:#f9690e; text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;">
                                 Productos de Alivén</h2>
-                            <a href="/productos?categoria_id=2" class="c-button" role="button"
-                                aria-label="View our best sellers." target="_self"><span
-                                    class="c-icon -arrow-right">‌</span></a>
+                            <a href="/productos?categoria_id=2" class="c-button" role="button" aria-label="View our best sellers." target="_self"><span class="c-icon -arrow-right">‌</span></a>
                         </div>
                     </div>
                 </div>
                 <div class="o-grid__column -lg-6 -sm-4 -xs-4">
                     <div>
                         <div class="c-call-to-action " style="background-image: url(/storage/concreto1.jpg)">
-                            <h2
-                                style="color:#f9690e;text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;">
+                            <h2 style="color:#f9690e;text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;">
                                 Productos de Concreto</h2>
-                            <a href="/productos?categoria_id=1" class="c-button" role="button"
-                                aria-label="Find your wine." target="_self"><span
-                                    class="c-icon -arrow-right">‌</span></a>
+                            <a href="/productos?categoria_id=1" class="c-button" role="button" aria-label="Find your wine." target="_self"><span class="c-icon -arrow-right">‌</span></a>
                         </div>
                     </div>
                 </div>
@@ -195,54 +183,28 @@
                             <img src="/storage/565656.jpg">
                         </div>
                         <div class="o-grid__column -lg-6 -md-7 -sm-8 -xs-4 -lg-push-1 -md-push-0">
-                            <p>Somos una empresa Venezolana líder en la fabricación de <strong>productos
-                                    prefabricados</strong> de
-                                concreto y productos de <strong>concreto liviano</strong>
-                                para obras civiles, eléctricas y saneamiento. Contamos con un equipo de profesionales
-                                con alta capacidad y experiencia en el rubro. Poseemos la infraestructura y la
-                                tecnología idónea que nos permite garantizar productos de <strong>alta calidad</strong>.
+                            <p><strong>Concretera de los Llanos Centrales C.A </strong> es una empresa líder con amplía experiencia en la elaboración de productos de <strong>Concreto, Prefabricados y de Aliven</strong>, diseñado para obras <strong>civiles, eléctricas</strong> y de <strong>saneamiento</strong>.
                             </p>
 
                             <p>
-                                <strong>Concretera de los LLanos Centrales</strong> es una empresa con amplia
-                                experiencia en la
-                                fabricaciòn de productos prefabricados de concreto, dirigido al rubro de obras civiles.
+                                La filosofía <strong>vanguardista</strong> que tiene siempre presente nuestra empresa es la constante actualización e <strong>innovación</strong> en la elaboración de todos  <a href="/productos">nuestros productos</a> de acuerdo a los nuevos requerimientos del <strong>mundo de la construcción</strong>.
                             </p>
 
                             <p>
-                                La filosofía vanguardista que tiene siempre presente nuestra empresa en la fabricaciòn
-                                de concreto es la constante actualización e innovación en la elaboración de nuestros
-                                productos de acuerdo a los nuevos requerimientos del mundo de la construcción.
+                                Nuestra meta es la <strong>satisfacción</strong> de nuestros clientes gracias a la <strong> calidad, puntualidad y eficiencia </strong> en la entrega de los productos, ofrecemos <strong>precios competitivos</strong> sin que esto merme la calidad de los mismos, pero sobre todo tenemos el fin y el <strong>compromiso de contribuir al desarrollo del sector construcción</strong>.
                             </p>
 
-                            <p>Nuestra meta es <strong>cumplir con nuestros clientes con calidad, puntualidad y
-                                    eficiencia. </strong> En
-                                nuestras entregas de productos ofrecemos precios competitivos dentro del mercado sin que
-                                esto merme la calidad de nuestros productos.
-                                Tenemos el fin y el compromiso de contribuir al desarrollo de la industria de la
-                                construcción
-                            </p>
-
-
-                            <p>
-                                Nuestros <strong>productos prefabricados de Concreto y Aliven</strong> están en todas
-                                partes.
-                                Desarrollamos productos, acordes a las necesidades y a las exigencias del mercado
-                                nacional,
+                            <p>Nuestros productos de <strong>Concreto, Prefabricados y de Aliven</strong> están en todas partes. <strong>Desarrollamos</strong> productos acorde a las necesidades y exigencias del mercado nacional,
                                 <a href="/productos">conoce mas acerca de estos.</a>
                             </p>
 
-                            <p>
-                                Nuestra empresa brinda los servicios de fabricación y movilización de piezas de concreto
-                                prefabricado
-                                para los rubros de electricidad, agua, desagüe y construcción,<strong> cumpliendo con
-                                    rigurosos estándares de calidad </strong>, garantizándoles que nuestros productos
-                                cumplan los
-                                requerimientos exigidos en su obra.
 
-                                Nuestro personal cuenta con la experiencia y la capacidad que requiere la elaboración de
-                                cada una de las piezas, respetando las normas técnicas que se requieren en la
-                                elaboración de estos.
+                            <p>
+                                Nuestro personal cuenta con <strong>experiencia y capacidad</strong> que requiere la elaboración de cada una de las piezas respetando las <strong>normas técnicas requeridas</strong> en cada uno de estos.
+                            </p>
+
+                            <p>
+                                Nuestra empresa además de brindar los <strong>servicios de Fabricación</strong>, tambien ofrece <strong>Asesoría en la planificación</strong> de obras relacionadas al sector construcción y dispone de una amplía gama de <a href="/productos?categoria_id=3">agregados</a> requeridos en la ejecución de obras de concreto.
                             </p>
                         </div>
                         <div class="o-grid__column -lg-4 -md-5 -sm-8 -xs-4 -lg-push-2 -md-push-0 -sm-hidden">
@@ -288,117 +250,111 @@
                                         @foreach ($horarios as $dia)
                                             <tr>
                                                 <td>{{ $dia->dia }}</td>
-                                                <td>{{ $dia->apertura }} - {{ $dia->cierre }}</td>
-                                            </tr>
-                                        @endforeach
+            <td>{{ $dia->apertura }} - {{ $dia->cierre }}</td>
+            </tr>
+            @endforeach
 
-                                    </tbody>
-                                </table>
-                            </div>
+            </tbody>
+            </table>
+    </div>
 
 
-                            <div class="o-location-list ">
-                                <div class="c-location">
-                                    <h2>Cede Principal</h2>
-                                    <p>
-                                        Carretera via San Juan-Parapara <br>
-                                        S/N <br>
-                                        J298862432 <br>
-                                    </p>
-                                </div>
+    <div class="o-location-list ">
+        <div class="c-location">
+            <h2>Cede Principal</h2>
+            <p>
+                Carretera via San Juan-Parapara <br>
+                S/N <br>
+                J298862432 <br>
+            </p>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="o-grid__column -lg-4 -md-5 -sm-8 -xs-4 -lg-push-1 -md-push-0">
+        <div>
+            <section class="c-contact ">
+                <form ws-contact-form="">
+                    <h1>Contact Us</h1>
+                    <p>Have a question or a comment? Fill out the form below to send us a message.</p>
+                    <div class="c-contact__wrapper" ws-contact-wrapper="">
+                        <div class="c-contact__wrapper__inputs">
+                            <label>
+                                Name
+                                <input type="text" name="name" maxlength="200">
+                            </label>
+                            <label>
+                                Email
+                                <input type="text" name="email" maxlength="255">
+                            </label>
+                            <label>
+                                Message
+                                <textarea name="message" maxlength="2000"></textarea>
+                            </label>
+                            <div class="c-contact__wrapper__inputs__buttons">
+                                <button type="reset" class="c-button -black">Cancel</button>
+                                <button type="submit" class="c-button">Submit</button>
                             </div>
                         </div>
                     </div>
-                    <div class="o-grid__column -lg-4 -md-5 -sm-8 -xs-4 -lg-push-1 -md-push-0">
-                        <div>
-                            <section class="c-contact ">
-                                <form ws-contact-form="">
-                                    <h1>Contact Us</h1>
-                                    <p>Have a question or a comment? Fill out the form below to send us a message.</p>
-                                    <div class="c-contact__wrapper" ws-contact-wrapper="">
-                                        <div class="c-contact__wrapper__inputs">
-                                            <label>
-                                                Name
-                                                <input type="text" name="name" maxlength="200">
-                                            </label>
-                                            <label>
-                                                Email
-                                                <input type="text" name="email" maxlength="255">
-                                            </label>
-                                            <label>
-                                                Message
-                                                <textarea name="message" maxlength="2000"></textarea>
-                                            </label>
-                                            <div class="c-contact__wrapper__inputs__buttons">
-                                                <button type="reset" class="c-button -black">Cancel</button>
-                                                <button type="submit" class="c-button">Submit</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p class="c-contact__result" ws-contact-result="">‌</p>
-                                </form>
-                            </section>
-                        </div>
-                    </div>
-                </div>
-            </section> --}}
-        </main>
+                    <p class="c-contact__result" ws-contact-result="">‌</p>
+                </form>
+            </section>
+        </div>
+    </div>
+    </div>
+    </section> --}}
+    </main>
 
 
-        <footer class="c-footer">
-            <div class="o-grid">
-                <div class="o-grid__column -lg-4 -sm-hidden">
-                    <section class="c-footer__follow">
-                        <h1>Siguenos en Nuestras Redes Sociales</h1>
-                        @if (isset($redes['Instagram']))
-                            <a href="{{ $redes['Instagram'] }}" class="c-icon -social-instagram" title="Instagram"
-                                target="_blank">‌</a>
-                        @endif
-                        @if (isset($redes['Twitter']))
-                            <a href="{{ $redes['Twitter'] }}" class="c-icon -social-twitter" title="Twitter"
-                                target="_blank">‌</a>
-                        @endif
-                        @if (isset($redes['Facebook']))
-                            <a href="{{ $redes['Facebook'] }}" class="c-icon -social-facebook" title="Facebook"
-                                target="_blank">‌</a>
-                        @endif
-                    </section>
-                    <div class="c-footer__copyright">
-                        <p>
-                            © 2022 Concretera de los Llanos Centrales. C.A.<br>
-                        </p>
-                    </div>
+    <footer class="c-footer">
+        <div class="o-grid">
+            <div class="o-grid__column -lg-4 -sm-hidden">
+                <section class="c-footer__follow">
+                    <h1>Siguenos en Nuestras Redes Sociales</h1>
+                    @if (isset($redes['Instagram']))
+                    <a href="{{ $redes['Instagram'] }}" class="c-icon -social-instagram" title="Instagram" target="_blank">‌</a>
+                    @endif
+                    @if (isset($redes['Twitter']))
+                    <a href="{{ $redes['Twitter'] }}" class="c-icon -social-twitter" title="Twitter" target="_blank">‌</a>
+                    @endif
+                    @if (isset($redes['Facebook']))
+                    <a href="{{ $redes['Facebook'] }}" class="c-icon -social-facebook" title="Facebook" target="_blank">‌</a>
+                    @endif
+                </section>
+                <div class="c-footer__copyright">
+                    <p>
+                        © 2022 Concretera de los Llanos Centrales. C.A.<br>
+                    </p>
                 </div>
-                <div class="o-grid__column -lg-3 -md-4 -sm-hidden">
-                    <div class="c-footer__nav">
-                        <ul>
-                            <li>
-                                <a href="/productos" class="">Nuestros&nbsp;Productos</a>
-                            </li>
+            </div>
+            <div class="o-grid__column -lg-3 -md-4 -sm-hidden">
+                <div class="c-footer__nav">
+                    <ul>
+                        <li>
+                            <a href="/productos" class="">Nuestros&nbsp;Productos</a>
+                        </li>
 
-                            <li>
-                                <a href="/contactanos" class="">Contactanos</a>
-                            </li>
-                        </ul>
-                    </div>
+                        <li>
+                            <a href="/contactanos" class="">Contactanos</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="o-grid__column -lg-5 -md-4 -right-border">
-                    <section class="c-footer__follow -sm-visible">
-                        <h1>Siguenos en Nuestras Redes Sociales</h1>
-                        @if (isset($redes['Instagram']))
-                            <a href="{{ $redes['Instagram'] }}" class="c-icon -social-instagram" title="Instagram"
-                                target="_blank">‌</a>
-                        @endif
-                        @if (isset($redes['Twitter']))
-                            <a href="{{ $redes['Twitter'] }}" class="c-icon -social-twitter" title="Twitter"
-                                target="_blank">‌</a>
-                        @endif
-                        @if (isset($redes['Facebook']))
-                            <a href="{{ $redes['Facebook'] }}" class="c-icon -social-facebook" title="Facebook"
-                                target="_blank">‌</a>
-                        @endif
-                    </section>
-                    {{-- <section class="c-footer__newsletter">
+            </div>
+            <div class="o-grid__column -lg-5 -md-4 -right-border">
+                <section class="c-footer__follow -sm-visible">
+                    <h1>Siguenos en Nuestras Redes Sociales</h1>
+                    @if (isset($redes['Instagram']))
+                    <a href="{{ $redes['Instagram'] }}" class="c-icon -social-instagram" title="Instagram" target="_blank">‌</a>
+                    @endif
+                    @if (isset($redes['Twitter']))
+                    <a href="{{ $redes['Twitter'] }}" class="c-icon -social-twitter" title="Twitter" target="_blank">‌</a>
+                    @endif
+                    @if (isset($redes['Facebook']))
+                    <a href="{{ $redes['Facebook'] }}" class="c-icon -social-facebook" title="Facebook" target="_blank">‌</a>
+                    @endif
+                </section>
+                {{-- <section class="c-footer__newsletter">
                         <h1>Solicita tu Cotización</h1>
                         <form
                             action="https://winestore-online.us1.list-manage.com/subscribe/post?u=c0a9efc525bfba905d31b49b7&amp;id=8dfa8c03a4"
@@ -415,28 +371,28 @@
                             <button type="submit" class="c-button" value="Submit">Submit</button>
                         </form>
                     </section> --}}
-                </div>
-                <div class="o-grid__column -lg-4 -sm-visible">
-                    <div class="c-footer__nav">
-                        <ul>
-                            <li>
-                                <a href="/productos" class="">Nuestros&nbsp;Productos</a>
-                            </li>
+            </div>
+            <div class="o-grid__column -lg-4 -sm-visible">
+                <div class="c-footer__nav">
+                    <ul>
+                        <li>
+                            <a href="/productos" class="">Nuestros&nbsp;Productos</a>
+                        </li>
 
-                            <li>
-                                <a href="/contactanos" class="">Contactanos</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="c-footer__copyright">
-                        <p>
-                            © 2022 Concretera de los Llanos Centrales. C.A.<br>
-                            <a href="/terms">Terms of Service</a>
-                        </p>
-                    </div>
+                        <li>
+                            <a href="/contactanos" class="">Contactanos</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="c-footer__copyright">
+                    <p>
+                        © 2022 Concretera de los Llanos Centrales. C.A.<br>
+                        <a href="/terms">Terms of Service</a>
+                    </p>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
 
     </div>
 

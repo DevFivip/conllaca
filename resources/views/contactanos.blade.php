@@ -102,11 +102,7 @@
                     <div class="c-search-bar__results o-grid -sm-collapse" ws-search-bar-results=""></div>
                 </div>
         </header>
-
-
-
         <main id="main" class="c-main">
-
             <a href="https://api.whatsapp.com/send?phone={{ $info->whatapp }}&text=Hola,Buen dia!" class="float" target="_blank">
                 <i class="fa fa-whatsapp my-float"></i>
             </a>
